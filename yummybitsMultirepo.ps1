@@ -12,7 +12,7 @@ $repositories = @(
 )
 
 # Base directory where all repositories will be mirrored
-$baseDirectory = "C:\MirroredRepos"
+$baseDirectory = Read-Host "Enter the base directory for mirroring repositories"
 
 foreach ($repo in $repositories) {
     $repoName = $repo.Name
@@ -77,6 +77,7 @@ foreach ($repo in $repositories) {
         Write-Host "Downloaded package to: $localFilePath"
         }
 
+    }
 
 Write-Host "Completed downloading packages for repository: $repoName"
 
