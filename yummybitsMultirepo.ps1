@@ -20,19 +20,19 @@ for ($i = 0; $i -lt $repositories.Count; $i++) {
 # Prompt user to select repositories
 $selectedRepos = @()
 while ($true) {
-    $input = Read-Host "Enter the number of the repository you want to download (or 'O66' to download all), or press Enter to finish:"
-    if ($input -eq "") {
+    $userInput = Read-Host "Enter the number of the repository you want to download (or execute 'O66' to download all), or press Enter to finish:"
+     if ($userInput -eq "") {
         break
     }
-    elseif ($input -eq "O66") {
+     elseif ($userInput -eq "O66") {
         $selectedRepos = $repositories
         break
-    }
-    elseif ($input -ge 1 -and $input -le $repositories.Count) {
-        $selectedRepos += $repositories[$input - 1]
+     }
+     elseif ($userInput -ge 1 -and $userInput -le $repositories.Count) {
+         $selectedRepos += $repositories[$userInput - 1]
     }
     else {
-        Write-Host "Invalid input. Please enter a valid number or 'O66' to download all repositories."
+        Write-Host "Invalid input. Please enter a valid number or execute 'O66' to download all repositories."
     }
 }
 
