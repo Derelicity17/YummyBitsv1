@@ -1,14 +1,14 @@
 # Repository Metadata and Package Downloader
 
-This PowerShell script is designed to automate the process of downloading repository metadata and packages based on the provided `repomd.xml` file URL. It's particularly useful for managing and mirroring repository data locally or in disconnected environments.
+These PowerShell scripts automate the process of downloading repository metadata and packages based on the provided `repomd.xml` file(s) URL. They are particularly useful for managing and mirroring repository data locally or in disconnected environments.
+
+TLDR: download your Linux mirror on Windows!
 
 ## Features
 
-- Prompts the user for the URL to the repository's `repomd.xml` file.
-- Automatically determines the base URL of the repository.
-- Downloads `repomd.xml` and parses it to find the location of the primary dataset.
-- Downloads and extracts the primary dataset to identify package locations.
-- Downloads each package, preserving the repository's directory structure locally.
+- **Automated Metadata Download:** The script prompts the user for the URL to the repository's `repomd.xml` file(s) and then automatically determines the base URL of the repository. It proceeds to download `repomd.xml` and parses it to find the location of the primary dataset.
+- **Package Download:** After extracting the primary dataset to identify package locations, the script downloads each package, preserving the repository's directory structure locally.
+- **Multiple Repository Support:** The multi-repository script supports downloading metadata and packages from multiple repositories, enabling efficient management of diverse repository sources.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ Before running the script, ensure you have the following installed on your syste
 
 1. Open PowerShell and navigate to the directory containing the script.
 2. Run the script by typing `.\scriptName.ps1`, where `scriptName.ps1` is the name you've saved the script as.
-3. When prompted, enter the full URL to the `repomd.xml` file of the repository you wish to download metadata and packages from.
+3. Follow the prompts to provide the necessary inputs, including the URL(s) to the `repomd.xml` file(s) of the repository or repositories you wish to download metadata and packages from.
 
 The script will then proceed to download and organize the repository data into the specified local directories.
 
@@ -68,4 +68,3 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 Please make sure to update tests as appropriate!
-
