@@ -3,8 +3,8 @@ $repomdXmlUrl = Read-Host "Please enter the URL to the repomd.xml file"
 $repoBaseUrl = $repomdXmlUrl -replace "repodata/repomd.xml$", "" # Assumes repomd.xml is at the specific location
 
 # Define local paths for downloading the metadata and packages
-$localMetadataDir = "insertExternalMedia\RepoMetadata"
-$localPackagesDir = "insertExternalMedia\DownloadedPackages"
+$localMetadataDir = "Path\to\ExternalMedia\RepoMetadata"
+$localPackagesDir = "Path\to\ExternalMedia\DownloadedPackages"
 
 # Ensure the local directories exist
 New-Item -Path $localMetadataDir -ItemType Directory -Force
