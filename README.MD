@@ -23,7 +23,7 @@ Before running the script, ensure you have the following installed on your syste
 2. Run the script by typing `.\scriptName.ps1`, where `scriptName.ps1` is the name you've saved the script as.
 3. Follow the prompts to provide the necessary inputs, including the URL(s) to the `repomd.xml` file(s) of the repository or repositories you wish to download metadata and packages from.
 
-The script will then proceed to download and organize the repository data into the specified local directories.
+The script will then proceed to download and organize the repository data into the specified local directories. During execution, it will display detailed progress information, including the files being downloaded and their download status.
 
 ## Customization
 
@@ -42,6 +42,10 @@ Ensure these directories exist or are accessible to the script for writing.
 ## Contributing
 
 Feel free to fork this project and submit pull requests for any improvements or fixes. For major changes, please open an issue first to discuss what you would like to change.
+
+## Feature Requests
+
+If you have any ideas for new features or improvements, please open an issue on the GitHub repository to discuss them. We welcome contributions and feedback from the community!
 
 ## License
 
