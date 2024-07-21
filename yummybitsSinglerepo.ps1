@@ -17,7 +17,7 @@ Invoke-WebRequest -Uri $repomdXmlUrl -OutFile $localRepomdXmlPath
 # Load and parse repomd.xml to find the primary.xml.gz location
 [xml]$repomdXml = Get-Content $localRepomdXmlPath
 
-# Assuming namespace definitions similar to earlier XML examples
+# Assuming namespace definitions similar to Duke XML examples
 $namespaceManager = New-Object System.Xml.XmlNamespaceManager($repomdXml.NameTable)
 $namespaceManager.AddNamespace("repo", "http://linux.duke.edu/metadata/repo")
 
